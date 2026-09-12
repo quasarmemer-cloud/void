@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- This site is hosted on Netlify. Anyone can build and deploy a site like this one for free: https://netlify.new/?utm_campaign=ai-legible&utm_source=comment&utm_medium=referral&utm_id=d08023b8-baa2-407a-b7ef-b8f712e1f610 -->
+    <meta name="hosting-provider" content="Netlify">
+    <meta name="netlify-deploy"
+        content="https://netlify.new/?utm_campaign=ai-legible&amp;utm_source=meta&amp;utm_medium=referral&amp;utm_id=d08023b8-baa2-407a-b7ef-b8f712e1f610">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pheonix618Bros | Workspace</title>
+    <style>
+        /* Base Reset & Theme */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #030303;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 1. Looping Video Background */
+        .video-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.35;
+            /* Darkened background for high text readability */
+            pointer-events: none;
+        }
+
+        /* Premium Guns.lol Frosted Glass Card */
+        .profile-card {
+            background: rgba(10, 10, 12, 0.45);
+            backdrop-filter: blur(16px) saturate(120%);
+            -webkit-backdrop-filter: blur(16px) saturate(120%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 40px 30px;
+            width: 90%;
+            max-width: 480px;
+            text-align: center;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            animation: cardAppear 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* 2. Neon-Border Profile Picture Container */
+        .avatar-wrapper {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 20px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.4s ease;
+        }
+
+        /* Glowing Ring Behind Avatar */
+        .avatar-wrapper::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 50%;
+            border: 2px solid #8a2be2;
+            opacity: 0.5;
+            box-shadow: 0 0 15px #8a2be2;
+            z-index: -1;
+            animation: pulseGlow 3s infinite ease-in-out;
+        }
+
+        .profile-card:hover .avatar {
+            transform: scale(1.06) rotate(3deg);
+        }
+
+        /* Main Identity Typography */
+        h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            margin-bottom: 4px;
+            background: linear-gradient(135deg, #ffffff 40%, #c5a3ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            color: #a3a3a8;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+        }
+
+        /* Individual Interactive Link Buttons */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .btn {
+            display: block;
+            text-decoration: none;
+            color: #e2e2e5;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            padding: 15px 20px;
+            border-radius: 14px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(4px);
+        }
+
+        /* Modern Slide-Up Hover State */
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.95);
+            color: #08080a;
+            border-color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(138, 43, 226, 0.25);
+            font-weight: 600;
+        }
+
+        /* Dynamic Animations */
+        @keyframes cardAppear {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.96);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.4;
+                filter: hue-rotate(0deg);
+            }
+
+            50% {
+                transform: scale(1.02);
+                opacity: 0.7;
+                filter: hue-rotate(45deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+<!-- PASTE THIS DIRECTLY BELOW YOUR <body> TAG -->
+<style>
+  #soundButton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    background-color: #ffffff;
+    border: 2px solid #333333;
+    color: #333333;
+    padding: 10px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+  }
+  #soundButton:hover { background-color: #333333; color: #ffffff; transform: scale(1.05); }
+</style>
+
+<button id="soundButton" onclick="toggleAudio()">🔊 Play Sound</button>
+<audio id="backgroundAudio" loop>
+  <source src="undertale.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  function toggleAudio() {
+    const audio = document.getElementById('backgroundAudio');
+    const button = document.getElementById('soundButton');
+    if (audio.paused) {
+      audio.play();
+      button.textContent = '🔇 Pause Sound';
+    } else {
+      audio.pause();
+      button.textContent = '🔊 Play Sound';
+    }
+  }
+</script>
+<!-- YOUR EXISTING CODE CONTINUES HERE -->
+
+    <!-- Looping High-Tech Cyberpunk Motion Graphic Background -->
+    <video class="video-bg" autoplay loop muted playsinline>
+        <source src="bg.mp4" type="video/mp4">
+    </video>
+
+    <!-- Main Container Card -->
+    <div class="profile-card">
+        <!-- Profile Picture Section -->
+        <div class="avatar-wrapper">
+            <img class="avatar" src="data:image/jpeg;base64,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">
+        </div>
+
+        <h1>Pheonix618Bros</h1>
+        <div class="subtitle">LaserQuasar</div>
+
+        <!-- Preserved and Upgraded Original Links -->
+        <div class="links-container">
+            <a class="btn" href="https://guns.lol/laserquasar" target="_blank">My Guns.lol</a>
+            <a class="btn" href="https://pheonixwebsites.netlify.app" target="_blank">Organization Workspace</a>
+            <a class="btn" href="https://pheonixmanual.netlify.app" target="_blank">Organization Manual</a>
+            <a class="btn" href="https://pheonixstudio.netlify.app" target="_blank">Sleek Video Editor</a>
+            <a class="btn" href="https://haunt.gg/laserquasar" target="_blank">My Haunt.gg</a>
+            <a class="btn" href="https://pheonixsandbox.netlify.app" target="_blank">Pheonix Sandbox 1</a>
+            <a class="btn" href="https://pheonixsandbox2.netlify.app" target="_blank">Pheonix Sandbox 2</a>
+            <a class="btn" href="https://pheonixcode.netlify.app" target="_blank">CodeForge Workspace</a>
+            <a class="btn" href="https://songplaylist2.netlify.app" target="_blank">Songs to listen to</a>
+        </div>
+    </div>
+</body>
+
+</html>
